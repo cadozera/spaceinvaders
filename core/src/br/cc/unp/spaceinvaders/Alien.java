@@ -1,4 +1,4 @@
-/*Classe dos aliens onde possui as posi;'oes para cria;'ao do objeto na classe
+/*Classe dos aliens onde possui as posicoes para criacao do objeto na classe
 GameScreen*/
 
 package br.cc.unp.spaceinvaders;

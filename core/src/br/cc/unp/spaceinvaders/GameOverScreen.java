@@ -1,3 +1,4 @@
+/*Classe da tela gameover que contem imagem e os textos da imagem*/
 package br.cc.unp.spaceinvaders;
 
 import com.badlogic.gdx.Gdx;
@@ -7,7 +8,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-/*Classe da tela gameover que contem imagem e os textos da imagem*/
+
 public class GameOverScreen extends ScreenAdapter {
 
     private SpaceInvaders game;
