@@ -1,3 +1,5 @@
+/*Classe responsavel pelos arquivos internos do programa com as imagens e sons do programa*/
+
 package br.cc.unp.spaceinvaders;
 
 import com.badlogic.gdx.Gdx;
@@ -5,7 +7,7 @@ import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
 
 public class Assets {
-
+    //Variaveis com os arquivos como resolucao imagens e sons
     public static int LARGURA = 480;
     public static int ALTURA = 650;
     public static String n_alien = "alien.png";

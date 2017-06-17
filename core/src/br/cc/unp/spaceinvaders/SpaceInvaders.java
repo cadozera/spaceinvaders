@@ -1,3 +1,4 @@
+/*Classe de execucao da mainscreen*/
 package br.cc.unp.spaceinvaders;
 
 import com.badlogic.gdx.Game;

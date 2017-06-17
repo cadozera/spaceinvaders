@@ -1,3 +1,4 @@
+/*Classe dos objetos do jogo ela fica responsavel pela parte da matriz do jogo posicao x e y dos objetos como o jogo e em 2d*/
 package br.cc.unp.spaceinvaders;
 
 import com.badlogic.gdx.graphics.Texture;

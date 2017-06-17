@@ -1,3 +1,4 @@
+/*Classe que contem a criacao dos objetos e a execucao dos mesmo e onde e executado tambem os sprites*/
 package br.cc.unp.spaceinvaders;
 
 import com.badlogic.gdx.Gdx;
@@ -30,14 +31,14 @@ public class GameScreen extends ScreenAdapter {
         stage = new Stage();
         Fundotela fundo = new Fundotela(Assets.fundotela, 0, 0);
         stage.addActor(fundo);
-        ship = new Ship(Assets.n_starfighter, Assets.LARGURA / 2 - 30, 0, this);
+        ship = new Ship(Assets.n_starfighter, Assets.LARGURA / 2 - 30, 0, this); //criacao do objeto ship para ser executado
         stage.addActor(ship);
         aliens = new Group();
         stage.addActor(aliens);
         batch = new SpriteBatch();
         font = new BitmapFont();
 
-        Timer.schedule(new Timer.Task() {
+        Timer.schedule(new Timer.Task() {   //funcao para chamar os aliens para a tela num tempo e quantidade
             @Override
             public void run() {
                 positionAliens();
@@ -59,14 +60,14 @@ public class GameScreen extends ScreenAdapter {
 
         batch.end();
 
-        if (!ship.isLive()) {
+        if (!ship.isLive()) {   //condicao que compara que se a nave for diferente de viva ela roda  a gameoverscreen
             Assets.fundo.stop();
             game.setScreen(new GameOverScreen(game));
 
         }
     }
 
-    private void positionAliens() {
+    private void positionAliens() { //funcao para adicionar os aliens a tela e move-los para uma direcao
         float x = MathUtils.random(20, Assets.LARGURA - 40);
         Alien alien = new Alien(Assets.n_alien, x, Assets.ALTURA);
         alien.addAction(Actions.sequence(Actions.moveBy(0, -Assets.ALTURA, 5.0f), Actions.removeActor()));
@@ -80,7 +81,7 @@ public class GameScreen extends ScreenAdapter {
     }
 
     void addpontos() {
-      pontos=pontos+1;  
+      pontos=pontos+1;  //funcao para adicionar os pontos ao jogo
     }
 
 }

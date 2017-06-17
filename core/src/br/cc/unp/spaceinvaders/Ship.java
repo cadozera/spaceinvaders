@@ -1,3 +1,5 @@
+/*Classe da nave que anda para esquerda e para direita criacao do objeto do mesmo para ser executado na classe gamescreen*/
+
 package br.cc.unp.spaceinvaders;
 
 import com.badlogic.gdx.Gdx;
@@ -22,7 +24,7 @@ public class Ship extends GameObject {
     @Override
     public void act(float delta) {
         super.act(delta);
-        if (Gdx.input.isKeyPressed(Keys.SPACE)) {
+        if (Gdx.input.isKeyPressed(Keys.SPACE)) {   //classe de lancamento do missel com acriacao do objeto execucao do asstes e a condicao para tempo o proximo disparo
             if (TimeUtils.millis() - lastFire >= 300) {
                 Assets.missile.play();
                 Missile missile = new Missile(Assets.n_missile, getX() + getWidth() / 2 - 5, getY() + getHeight(), 300,gamescreen);
@@ -32,7 +34,7 @@ public class Ship extends GameObject {
 
         }
 
-        x = getX();
+        x = getX();     // condicao para movimentacao da nave
         if (Gdx.input.isKeyPressed(Keys.RIGHT)) {
             x += delta * vel;
         }

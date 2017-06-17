@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-
+/*Classe da tela gameover que contem imagem e os textos da imagem*/
 public class GameOverScreen extends ScreenAdapter {
 
     private SpaceInvaders game;
@@ -19,7 +19,7 @@ public class GameOverScreen extends ScreenAdapter {
     public GameOverScreen(SpaceInvaders game) {
         this.game = game;
         batch = new SpriteBatch();
-        img = new Texture("fundogameover.png");
+        img = new Texture("fundogameover.png"); // Texture da imagem de fundo que esta declarada na classe de assets
         sprite = new Sprite(img);
         font = new BitmapFont();
     }

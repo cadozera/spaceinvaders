@@ -1,3 +1,5 @@
+/*Classe da tela principal do jogo onde e clicado para ser executado o mesmo*/
+
 package br.cc.unp.spaceinvaders;
 
 import com.badlogic.gdx.Gdx;
@@ -29,7 +31,7 @@ public class MainScreen extends ScreenAdapter {
         Gdx.gl.glClearColor(0, 0, 0, 0);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-        if (Gdx.input.isTouched()) {
+        if (Gdx.input.isTouched()) {    //funcao para quando tocado na tela o jogo comecar
             game.setScreen(new GameScreen(game));
         }
 

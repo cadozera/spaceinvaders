@@ -1,3 +1,4 @@
+/*classe da criacao dos misseis e das funcoes que removem o alien quando ele e tocado pelo missel*/
 package br.cc.unp.spaceinvaders;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 
@@ -19,7 +20,7 @@ public class Missile extends GameObject {
 
         moveBy(0, vel * delta);
 
-        if (getY() > Assets.ALTURA) {
+        if (getY() > Assets.ALTURA) {       //funcao para remocao do alien quando o missel tocar ao mesmo e a movimentacao do missel
             remove();
         } else {
             for (Actor a : GameScreen.aliens.getChildren()) {
